@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBE7C9"
+    tools:context=".Compass">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        android:background="@drawable/top_box"
+        app:title="Compass"
+        app:titleTextColor="#FFFFFF"
+        app:titleCentered="true" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginTop="10sp"
+        android:layout_below="@+id/toolbar"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:outlineSpotShadowColor="?attr/colorPrimary"
+        android:outlineAmbientShadowColor="?attr/colorPrimary"
+        app:cardElevation="10sp"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="#DBE7C9">
+
+
+        <ImageView
+            android:id="@+id/compassImageView"
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:src="@drawable/compass_new"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/card1"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:outlineSpotShadowColor="?attr/colorPrimary"
+        android:outlineAmbientShadowColor="?attr/colorPrimary"
+        app:cardElevation="10sp"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/headingTV"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="040"
+                    android:textColor="#E71616"
+                    android:textSize="70sp" />
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/directionTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="N"
+                        android:textColor="?attr/colorSurfaceInverse"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/latitudeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/compassImageView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="Lat: 0.0"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/longitudeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/latitudeTV"
+                        android:layout_centerHorizontal="true"
+                        android:text="Lon: 0.0"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/trueHeadingTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/longitudeTV"
+                        android:layout_centerHorizontal="true"
+                        android:text="True Heading: 0°"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="100sp"
+                android:layout_height="2sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="4sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/magneticStrengthTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trueHeadingTV"
+                android:layout_centerHorizontal="true"
+                android:text="Magnetic Strength: 0 µT"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/presureTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/magneticStrengthTV"
+                android:layout_centerHorizontal="true"
+                android:text="Pressure: 0 hPa"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/altitudeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/presureTV"
+                android:layout_centerHorizontal="true"
+                android:text="Altitude: 0 meters"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

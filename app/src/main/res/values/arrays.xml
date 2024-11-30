@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Define array for coordinate system options -->
+    <string-array name="coordinate_system_options">
+        <item>WGS84</item>
+        <item>Local Grid</item>
+    </string-array>
+</resources>

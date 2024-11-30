@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "700675482883",
+    "project_id": "geoplot123",
+    "storage_bucket": "geoplot123.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700675482883:android:103c197195185e5cf7f536",
+        "android_client_info": {
+          "package_name": "com.example.splashscreen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZpgTC2eQb1yIQKJ4p9EdkiGZLYidWEv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
